@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.xyslider.XYSlider" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>XYSlider</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="axis" type="enumeration" defaultValue="x">
+                <caption>Axis</caption>
+                <description>Slider Axis</description>
+                <enumerationValues>
+                    <enumerationValue key="x">x</enumerationValue>
+                    <enumerationValue key="y">y</enumerationValue>
+                    <enumerationValue key="xy">xy</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="disabled" type="boolean" defaultValue="false">
+                <caption>Disabled</caption>
+                <description></description>
+            </property>
+            <property key="customStyle" type="textTemplate" multiline="true" required="false">
+                <caption>Custom style</caption>
+                <description>Style object (see https://www.npmjs.com/package/react-input-slider for styling) </description>
+            </property>
+            <property key="bgImage" type="image" required="false">
+                <caption>Background Image</caption>
+                <description></description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Events">
+            <property key="xchange" type="attribute" onChange="onValueChange">
+                <caption>on X</caption>
+                <description>Change value</description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>
+                </attributeTypes>
+            </property>
+            <property key="ychange" type="attribute" onChange="onValueChange">
+                <caption>on Y</caption>
+                <description>Change value</description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>
+                </attributeTypes>
+            </property>
+            <property key="onValueChange" type="action">
+                <caption>On change</caption>
+                <description/>
+            </property>
+            <property key="onDragStart" type="action">
+                <caption>On Drag Start</caption>
+                <description/>
+            </property>
+            <property key="onDragEnd" type="action">
+                <caption>On Drag End</caption>
+                <description/>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="X settings">
+            <property key="xvalue" type="integer" defaultValue="50">
+                <caption>X Value</caption>
+                <description>Initial X value</description>
+            </property>
+            <property key="xmax" type="integer" defaultValue="100">
+                <caption>X Max</caption>
+                <description>X max value</description>
+            </property>
+            <property key="xmin" type="integer" defaultValue="0">
+                <caption>X min</caption>
+                <description>X max value</description>
+            </property>
+            <property key="xstep" type="integer" defaultValue="1">
+                <caption>X Step</caption>
+                <description>X Step value</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Y settings">
+            <property key="yvalue" type="integer" defaultValue="50">
+                <caption>Y Value</caption>
+                <description>Initial Y value</description>
+            </property>
+            <property key="ymax" type="integer" defaultValue="100">
+                <caption>Y Max</caption>
+                <description>Y max value</description>
+            </property>
+            <property key="ymin" type="integer" defaultValue="0">
+                <caption>Y min</caption>
+                <description>Y max value</description>
+            </property>
+            <property key="ystep" type="integer" defaultValue="1">
+                <caption>Y Step</caption>
+                <description>Y Step value</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
